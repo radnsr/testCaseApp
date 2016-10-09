@@ -1,0 +1,331 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+/* jsTree*/
+.tree, .tree ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.tree ul {
+	margin-left: 1em;
+	position: relative
+}
+
+.tree ul ul {
+	margin-left: .5em
+}
+
+.tree ul:before {
+	content: "";
+	display: block;
+	width: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-left: 1px solid
+}
+
+.tree li {
+	margin: 0;
+	padding: 0 1em;
+	line-height: 2em;
+	color: #369;
+	font-weight: 700;
+	position: relative
+}
+
+.tree ul li:before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 0;
+	border-top: 1px solid;
+	margin-top: -1px;
+	position: absolute;
+	top: 1em;
+	left: 0
+}
+
+.tree ul li:last-child:before {
+	background: #fff;
+	height: auto;
+	top: 1em;
+	bottom: 0
+}
+
+.indicator {
+	margin-right: 5px;
+}
+
+.tree li a {
+	text-decoration: none;
+	color: #369;
+}
+
+.tree li button, .tree li button:active, .tree li button:focus {
+	text-decoration: none;
+	color: #369;
+	border: none;
+	background: transparent;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	outline: 0;
+}
+</style>
+
+<style>
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		/* height: auto; */
+		padding: 15px;
+	}
+}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid text-center">
+		<div class="row content" style="height: 600px">
+			<div class="col-md-3 sidenav">
+				<div class="well">
+					<p>My Projects</p>
+				</div>
+
+				<div class="row">
+					<div class="col-md-7">
+						<ul id="tree1">
+							<li><a href="#">Project 1</a>
+								<ul>
+									<li>Test suite 1</li>
+									<li>
+										<ul>
+											<li>Test Case 1</li>
+											<li>Test Case 2</li>
+										</ul>
+									</li>
+									<li>Test Suite3</li>
+								</ul></li>
+							<li>Project1
+								<ul>
+									<li>Test suite 1</li>
+									<li>Test suite 2
+										<ul>
+											<li>Test Case 1</li>
+											<li>Test Case 2</li>
+										</ul>
+									</li>
+									<li>Human Resources</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="col-sm-7">
+				<div class="container-fluid">
+					<div class="well">
+						<button class="btn btn-primary" href="#modal" data-toggle="modal">Create</button>
+
+
+						<button class="btn btn-success">Save</button>
+						<button class="btn btn-warning">Run</button>
+						<button class="btn btn-danger">Delete</button>
+						<button class="btn btn-info">Help</button>
+					</div>
+					<div class="well">
+						<textarea rows="20" cols="75"
+							placeholder="enter business requirement here"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 sidenav">
+				<div class="well">
+					<p>ADS</p>
+				</div>
+				<div class="well"></div>
+			</div>
+		</div>
+	</div>
+	<div id="modal" class="modal fade" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 ">
+							<h3 class="m-t-none m-b">Create New Project</h3>
+							<form action="ProjectCon" method="post">
+								<div class="form-group">
+									<label>Project Name</label> <input type="text"
+										name="project_name" class="form-control">
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Create"
+										class="btn btn-success pull-right">
+								</div>
+
+
+								<button class="btn btn-primary m-t-n-xs" data-dismiss="modal">Close</button>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<footer class="container-fluid text-center">
+		<p>Footer Text</p>
+	</footer>
+
+</body>
+<script>
+	$.fn
+			.extend({
+				treed : function(o) {
+
+					var openedClass = 'glyphicon-minus-sign';
+					var closedClass = 'glyphicon-plus-sign';
+
+					if (typeof o != 'undefined') {
+						if (typeof o.openedClass != 'undefined') {
+							openedClass = o.openedClass;
+						}
+						if (typeof o.closedClass != 'undefined') {
+							closedClass = o.closedClass;
+						}
+					}
+					;
+
+					//initialize each of the top levels
+					var tree = $(this);
+					tree.addClass("tree");
+					tree
+							.find('li')
+							.has("ul")
+							.each(
+									function() {
+										var branch = $(this); //li with children ul
+										branch
+												.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+										branch.addClass('branch');
+										branch.on('click', function(e) {
+											if (this == e.target) {
+												var icon = $(this).children(
+														'i:first');
+												icon.toggleClass(openedClass
+														+ " " + closedClass);
+												$(this).children().children()
+														.toggle();
+											}
+										})
+										branch.children().children().toggle();
+									});
+					//fire event from the dynamically added icon
+					tree.find('.branch .indicator').each(function() {
+						$(this).on('click', function() {
+							$(this).closest('li').click();
+						});
+					});
+					//fire event to open branch if the li contains an anchor instead of text
+					tree.find('.branch>a').each(function() {
+						$(this).on('click', function(e) {
+							$(this).closest('li').click();
+							e.preventDefault();
+						});
+					});
+					//fire event to open branch if the li contains a button instead of text
+					tree.find('.branch>button').each(function() {
+						$(this).on('click', function(e) {
+							$(this).closest('li').click();
+							e.preventDefault();
+						});
+					});
+				}
+			});
+
+	//Initialization of treeviews
+
+	$('#tree1').treed();
+
+	$('#tree2').treed({
+		openedClass : 'glyphicon-folder-open',
+		closedClass : 'glyphicon-folder-close'
+	});
+
+	$('#tree3').treed({
+		openedClass : 'glyphicon-chevron-right',
+		closedClass : 'glyphicon-chevron-down'
+	});
+</script>
+</html>
+
