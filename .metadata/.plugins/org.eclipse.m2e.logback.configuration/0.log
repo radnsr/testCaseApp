@@ -3,3 +3,12 @@
 2016-10-09 22:37:55,016 [Thread-11] ERROR org.eclipse.jgit.util.FS - xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 
 2016-10-09 22:38:09,407 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: TestCaseApp:TestCaseApp:0.0.1-SNAPSHOT @ /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/pom.xml.
+2016-10-09 22:38:11,256 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-09 22:38:11,257 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/src/main/resources
+2016-10-09 22:38:11,548 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: TestCaseApp:TestCaseApp:0.0.1-SNAPSHOT @ /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/pom.xml.
+2016-10-09 22:38:11,553 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-09 22:38:11,562 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/src/test/resources
+2016-10-09 22:38:13,385 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-09 22:38:13,386 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/src/main/resources
+2016-10-09 22:38:13,388 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-09 22:38:13,389 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nipunaranasinghe/Documents/testCaseApp/TestCaseApp/src/test/resources
